@@ -17,7 +17,8 @@ with
 
     , joined as (
         select
-        customer.customer_id
+        row_number () over (order by customer_id) as customer_sk
+        , customer.customer_id
         , customer.territory_id
         , person.businessentity_id
         , person.name

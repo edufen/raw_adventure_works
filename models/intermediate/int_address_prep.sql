@@ -26,7 +26,8 @@ with
 
     , joined as (
         select
-        address.stateprovince_id
+        row_number () over (order by address_id) as address_sk
+        , address.stateprovince_id
         , address.address_id
         , address.postal_code
         , country.country_name
