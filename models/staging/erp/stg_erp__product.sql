@@ -2,8 +2,8 @@ with source as (
     select distinct
         productid as product_id
         , productsubcategoryid as productsubcategory_id
-        , name
-        , class
+        , name as product_name
+        , class as product_class
         , productnumber as product_number
         , productline as product_line
         , listprice as list_price

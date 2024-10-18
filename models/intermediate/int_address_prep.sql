@@ -15,19 +15,29 @@ with
 
     address as (
         select
-        address.address_id
-        , stateprovince.stateprovince_code
-        , address.stateprovince_id
-        , stateprovince.state_name
-        , stateprovince.countryregion_code
-        , country.country_name
-        , address.address_line
+        address_id
+        , stateprovince_id
+        , address_line
+        , postal_code
+        , city as city_name
+        from {{ ref('stg_erp__address') }}
+
+    )
+
+    , joined as (
+        select
+        address.stateprovince_id
+        , address.address_id
         , address.postal_code
-        , address.city as city_name
-        from {{ ref('stg_erp__address') }} as address
+        , country.country_name
+        , stateprovince.countryregion_code
+        , stateprovince.stateprovince_code
+        , stateprovince.state_name
+        , address.city_name
+        from address
         left join stateprovince on address.stateprovince_id = stateprovince.stateprovince_id
         left join country on stateprovince.countryregion_code = country.countryregion_code
     )
 
 select *
-from address
+from joined
