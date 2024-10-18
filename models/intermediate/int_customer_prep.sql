@@ -15,6 +15,14 @@ with
         from {{ ref('stg_erp__person') }}
     )
 
+    , businessentity as (
+        select
+        businessentity_id
+        , person_id
+
+        from {{ ref('stg_erp__businessidentitycontact') }}
+    )
+
     , joined as (
         select
         row_number () over (order by customer_id) as customer_sk
@@ -24,7 +32,8 @@ with
         , person.name
         , person.person_type
         from customer
-        left join person on customer.person_id = person.businessentity_id
+        left join businessentity on customer.person_id = businessentity.person_id
+        left join person on businessentity.businessentity_id = person.businessentity_id
     )
-
+    
     select * from joined
