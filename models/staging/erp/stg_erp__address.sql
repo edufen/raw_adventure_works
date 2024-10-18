@@ -2,7 +2,7 @@ with source as (
     select distinct
         addressid as address_id
         , stateprovinceid as stateprovince_id
-        , addressline1 as adress_line
+        , addressline1 as address_line
         , postalcode as postal_code
         , city
         , rowguid
