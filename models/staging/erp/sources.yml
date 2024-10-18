@@ -82,3 +82,10 @@ sources:
             data_tests:
               - unique
               - not_null
+      - name: salesterritoryhistory
+        description: A geographical area assigned to a sales representative or team, used for organizing sales efforts and managing customer relationships within specific regions.
+        columns:
+            - name: territory_id
+              data_tests:
+                - unique
+                - not_null
