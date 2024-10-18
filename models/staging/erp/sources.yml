@@ -1,0 +1,84 @@
+version: 2
+
+sources:
+  - name: AdventureWorks
+    database: FEA24_9
+    schema: RAW_ADVENTURE_WORKS
+    tables:
+      - name: address
+        description: Information about the customer's delivery or billing location, including street, number, city, and postal code.
+        columns:
+          - name: addressid
+            data_tests:
+                - unique
+                - not_null                
+      - name: countryregion
+        description: Represents the geographical region or country where the customer or operation is located.
+      - name: creditcard
+        description: Details of the credit card used to process transactions, including number, type, expiration date, and security code.
+        columns: 
+          - name: creditcardid
+            data_tests:
+              - unique
+              - not_null
+      - name: customer
+        description: Customer data, including personal and contact information, as well as purchase history.
+        columns: 
+          - name: customerid
+            data_tests:
+              - unique
+              - not_null
+      - name: currency
+        description: The type of currency used in transactions, such as USD, EUR, or BRL.
+      - name: currencyrate
+        description: The exchange rate between different currencies, used to convert amounts in international transactions.
+      - name: salesorderdetail
+        description: Details of each item in a sales order, including product, quantity, and price.
+        columns: 
+          - name: salesorderdetailid
+            data_tests:
+              - unique
+              - not_null
+          - name: salesorderid
+            data_tests:
+              - unique
+              - not_null              
+      - name: salesorderheader
+        description: A summary of a sales order containing information such as order date, total, and status.
+      - name: salesorderheadersalesreason
+        description: The reason associated with a sales order, explaining why it was placed.
+      - name: salesreason
+        description: Categorization of the reasons why sales occur, useful for sales analysis and marketing.
+        columns: 
+          - name: salesreasonid
+            data_tests:
+              - unique
+              - not_null
+      - name: person
+        description: Information about individuals involved in transactions, including salespeople or sales representatives.
+        columns: 
+          - name: businessentityid
+            data_tests:
+              - unique
+              - not_null
+      - name: product
+        description: Details about products available for sale, including description, price, and category.
+        columns: 
+          - name: productid
+            data_tests:
+              - unique
+              - not_null
+      - name: specialoffer
+        description: Special promotions or discounts applicable to specific products or categories.
+        columns: 
+          - name: specialofferid
+            data_tests:
+              - unique
+              - not_null
+      - name: stateprovince
+        description: An administrative unit representing states or provinces within a country, important for customer location.
+        columns: 
+          - name: stateprovinceid
+            data_tests:
+              - unique
+              - not_null
