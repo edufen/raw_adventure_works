@@ -25,8 +25,8 @@ with
 
     , joined as (
         select
-        row_number () over (order by customer_id) as customer_sk
-        , customer.customer_id
+        customer.customer_id
+        , customer.person_id
         , customer.territory_id
         , person.businessentity_id
         , person.name
@@ -35,5 +35,8 @@ with
         left join businessentity on customer.person_id = businessentity.person_id
         left join person on businessentity.businessentity_id = person.businessentity_id
     )
-    
+
+
     select * from joined
+    where name is not null
+    limit 50;
