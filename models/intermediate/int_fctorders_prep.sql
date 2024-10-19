@@ -96,7 +96,8 @@ with
         select
         salesorderheader.salesorder_id
         , customer.customer_sk
-        --, salesorderheader.creditcard_sk
+        , address.address_sk
+        , creditcard.creditcard_sk
         , salesorderheader.territory_id
         , salesorderheader.currencyrate_id
         , salesorderheader.purchaseorder_number
@@ -106,12 +107,56 @@ with
         , salesorderheader.due_date
         , salesorderheader.subtotal
         , salesorderheader.total_due
+        , currencyrate.average_rate
         , salesorderheader.tax_amt
         , salesorderheader.status
+        , salesreason.name
+        , salesreason.reason_type
         from salesorderheader
+        left join salesreason on salesorderheader.salesorder_id = salesreason.salesorder_id
+        left join address on salesorderheader.address_id = address.address_id
+        left join creditcard on salesorderheader.creditcard_id = creditcard.creditcard_id
         left join customer on salesorderheader.customer_id = customer.customer_id
+        left join currencyrate on salesorderheader.currencyrate_id = currencyrate.currencyrate_id
     )
     
-select * from ordersheader
+    , joined as (
+        select
+        ordersheader.salesorder_id
+        , ordersheader.customer_sk
+        , ordersheader.address_sk
+        , ordersheader.creditcard_sk
+        , ordersdetail.product_sk
+        , ordersdetail.specialoffer_id
+        , ordersdetail.product_id
+        , ordersheader.territory_id
+        , ordersheader.currencyrate_id
+        , ordersheader.purchaseorder_number
+        , ordersheader.creditcardapproval_code
+        , ordersheader.order_date
+        , ordersheader.ship_date
+        , ordersheader.due_date
+        , ordersheader.subtotal
+        , ordersheader.total_due
+        , ordersheader.average_rate
+        , ordersheader.tax_amt
+        , ordersheader.status
+        , ordersheader.name
+        , ordersheader.reason_type
+        , ordersdetail.unit_price
+        , ordersdetail.order_quantity
+        , ordersdetail.unitprice_discount
+        , ordersdetail.type
+        , ordersdetail.category
+        , ordersdetail.discount_pct
+        from ordersdetail
+        left join ordersheader on ordersdetail.salesorder_id = ordersheader.salesorder_id
+    )
+select
+    j.customer_sk
+    , j.salesorder_id 
+    , c.name
+from joined j
+join customer c on j.customer_sk = c.customer_sk
 
 
