@@ -33,6 +33,7 @@ with
     , salesorderheader as (
         select
         salesorder_id
+        , ship_address_id as address_id
         , currencyrate_id
         , creditcard_id
         , territory_id
@@ -78,13 +79,12 @@ with
         select
         salesorderdetail.salesorderdetail_id
         , salesorderdetail.salesorder_id
+        , product.product_sk
         , salesorderdetail.specialoffer_id
         , salesorderdetail.product_id
-        , product.product_name
         , salesorderdetail.unit_price
         , salesorderdetail.order_quantity
         , salesorderdetail.unitprice_discount
-        , product.standard_cost
         , specialoffer.type
         , specialoffer.category
         , specialoffer.discount_pct
@@ -95,8 +95,8 @@ with
     , ordersheader as (
         select
         salesorderheader.salesorder_id
-        , salesorderheader.customer_id
-        , salesorderheader.creditcard_id
+        , customer.customer_sk
+        --, salesorderheader.creditcard_sk
         , salesorderheader.territory_id
         , salesorderheader.currencyrate_id
         , salesorderheader.purchaseorder_number
@@ -113,4 +113,5 @@ with
     )
     
 select * from ordersheader
+
 
