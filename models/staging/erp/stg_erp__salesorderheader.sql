@@ -4,7 +4,7 @@ with source as (
         , salesorderid as salesorder_id
         , billtoaddressid as billtoaddress_id
         , salespersonid as salesperson_id
-        , shiptoaddressid as adress_id
+        , shiptoaddressid as ship_address_id
         , currencyrateid as currencyrate_id
         , creditcardid as creditcard_id
         , territoryid as territory_id
