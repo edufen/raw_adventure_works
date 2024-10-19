@@ -28,8 +28,6 @@ with
         left join person on customer.person_id = person.businessentity_id
     )
 
-
 select * from joined
-where name is not NULL
 
 

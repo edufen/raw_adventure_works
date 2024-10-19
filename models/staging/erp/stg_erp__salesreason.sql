@@ -5,5 +5,5 @@ with source as (
         , reasontype as reason_type
     from {{ source('AdventureWorks','salesreason')}}
 )
-select *
-from source
+
+select * from source

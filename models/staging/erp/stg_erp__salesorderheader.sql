@@ -23,6 +23,6 @@ with source as (
         , status
         , onlineorderflag as onlineorder_flag
     from {{ source('AdventureWorks','salesorderheader')}}
-)    
-select *
-from source
+)
+
+select * from source

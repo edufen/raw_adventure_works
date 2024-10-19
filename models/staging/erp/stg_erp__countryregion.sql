@@ -5,5 +5,5 @@ with source as (
         , CAST(modifieddate as DATETIME) as modified_date
     from {{ source('AdventureWorks','countryregion')}}
 )
-select *
-from source
+
+select * from source

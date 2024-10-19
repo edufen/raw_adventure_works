@@ -5,15 +5,15 @@ with
         , countryregion_code
         , name as state_name
         from {{ ref('stg_erp__stateprovince') }}
-    ),
+    )
 
-    country as (
+    , country as (
         select countryregion_code
         , country_name
         from {{ ref('stg_erp__countryregion') }}
-    ),
+    )
 
-    address as (
+    , address as (
         select
         address_id
         , stateprovince_id
@@ -21,7 +21,6 @@ with
         , postal_code
         , city as city_name
         from {{ ref('stg_erp__address') }}
-
     )
 
     , joined as (
@@ -40,5 +39,4 @@ with
         left join country on stateprovince.countryregion_code = country.countryregion_code
     )
 
-select *
-from joined
+select * from joined

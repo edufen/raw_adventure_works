@@ -10,5 +10,5 @@ with source as (
         , rowguid
     from {{ source('AdventureWorks','stateprovince')}}
 )
-select *
-from source
+
+select * from source

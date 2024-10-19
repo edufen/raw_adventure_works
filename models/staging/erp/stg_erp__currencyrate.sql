@@ -8,5 +8,5 @@ with source as (
         , endofdayrate as endofday_rate
     from {{ source('AdventureWorks','currencyrate')}}
 )
-select *
-from source
+
+select * from source

@@ -3,22 +3,27 @@ with
         select *
         from {{ ref('int_address_prep') }}
     )
+
     , customer as (
         select *
         from {{ ref('int_customer_prep') }}
     )
+
     , creditcard as (
         select *
         from {{ ref('int_creditcard_prep') }}
     )
+
     , product as (
         select *
         from {{ ref('int_product_prep') }}
     )
+
     , salesreason as (
         select *
         from {{ ref('int_salesreason_prep') }}
     )
+
     , salesorderdetail as (
         select
         salesorderdetail_id
@@ -30,6 +35,7 @@ with
         , unitprice_discount
         from {{ ref('stg_erp__salesorderdetail') }}
     )
+
     , salesorderheader as (
         select
         salesorder_id
@@ -49,12 +55,14 @@ with
         , status
         from {{ ref('stg_erp__salesorderheader') }}
     )
+
     , salesorderheadersalesreason as (
         select
         salesorder_id
         , salesreason_id
         from {{ ref('stg_erp__salesorderheadersalesreason') }}
     )
+
     , specialoffer as (
         select       
         specialoffer_id
@@ -67,6 +75,7 @@ with
         , max_quantity
         from {{ ref('stg_erp__specialoffer') }}
     )
+
     , currencyrate as (
         select
         currencyrate_id
@@ -75,6 +84,7 @@ with
         , average_rate
         from {{ ref('stg_erp__currencyrate') }}
     )
+
     , ordersdetail as (
         select
         salesorderdetail.salesorderdetail_id
@@ -92,6 +102,7 @@ with
         left join product on salesorderdetail.product_id = product.product_id
         left join specialoffer on salesorderdetail.specialoffer_id = specialoffer.specialoffer_id
     )
+
     , ordersheader as (
         select
         salesorderheader.salesorder_id
@@ -152,11 +163,7 @@ with
         from ordersdetail
         left join ordersheader on ordersdetail.salesorder_id = ordersheader.salesorder_id
     )
-select
-    j.customer_sk
-    , j.salesorder_id 
-    , c.name
-from joined j
-join customer c on j.customer_sk = c.customer_sk
+
+select * from joined
 
 

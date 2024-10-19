@@ -4,5 +4,5 @@ with source as (
         , businessentityid as businessentity_id
     from {{ source('AdventureWorks','salesterritoryhistory')}}
 )
-select *
-from source
+
+select * from source
