@@ -10,7 +10,7 @@ with source as (
         , carriertrackingnumber as carriertrack_number
         , rowguid
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','salesorderdetail')}}
+    from {{ source('AdventureWorks','salesorderdetail')}}
 )
 select *
 from source

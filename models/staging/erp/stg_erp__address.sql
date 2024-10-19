@@ -7,7 +7,7 @@ with source as (
         , city
         , rowguid
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','address')}}
+    from {{ source('AdventureWorks','address')}}
 )
 select *
 from source

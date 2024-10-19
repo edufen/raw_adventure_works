@@ -3,7 +3,7 @@ with source as (
         currencycode as currency_code
         , name
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','currency')}}
+    from {{ source('AdventureWorks','currency')}}
 )
 select *
 from source

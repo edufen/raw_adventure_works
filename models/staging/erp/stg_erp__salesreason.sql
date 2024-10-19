@@ -3,7 +3,7 @@ with source as (
         salesreasonid as salesreason_id
         , name 
         , reasontype as reason_type
-    from {{source('AdventureWorks','salesreason')}}
+    from {{ source('AdventureWorks','salesreason')}}
 )
 select *
 from source

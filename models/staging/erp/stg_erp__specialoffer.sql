@@ -11,7 +11,7 @@ with source as (
         , description
         , CAST(modifieddate as DATETIME) as modified_date
         , rowguid
-    from {{source('AdventureWorks','specialoffer')}}
+    from {{ source('AdventureWorks','specialoffer')}}
 )
 select *
 from source

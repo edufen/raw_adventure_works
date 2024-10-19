@@ -13,7 +13,7 @@ with source as (
         , CAST(sellenddate as DATETIME) as sellen_date
         , rowguid
         , CAST(modifieddate	as DATETIME) as modified_date
-    from {{source('AdventureWorks','product')}}
+    from {{ source('AdventureWorks','product')}}
 )
 select *
 from source

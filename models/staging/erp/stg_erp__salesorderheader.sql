@@ -9,10 +9,10 @@ with source as (
         , creditcardid as creditcard_id
         , territoryid as territory_id
         , customerid as customer_id
-        , purchaseordernumber as purchase_order_number
+        , purchaseordernumber as purchaseorder_number
         , accountnumber as account_number
         , revisionnumber as revision_number
-        , creditcardapprovalcode as credotcardapproval_code
+        , creditcardapprovalcode as creditcardapproval_code
         , CAST(orderdate as DATETIME) as order_date
         , CAST(shipdate as  DATETIME) as ship_date
         , CAST(duedate as DATETIME) as due_date
@@ -22,7 +22,7 @@ with source as (
         , freight
         , status
         , onlineorderflag as onlineorder_flag
-    from {{source('AdventureWorks','salesorderheader')}}
+    from {{ source('AdventureWorks','salesorderheader')}}
 )    
 select *
 from source

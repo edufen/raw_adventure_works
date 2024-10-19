@@ -3,7 +3,7 @@ with source as (
         countryregioncode as countryregion_code
         , name as country_name
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','countryregion')}}
+    from {{ source('AdventureWorks','countryregion')}}
 )
 select *
 from source

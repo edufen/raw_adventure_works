@@ -8,7 +8,7 @@ with source as (
         , emailpromotion as email_promotion		
 		, rowguid
 		, CAST(modifieddate as DATETIME) as modified_date			
-    from {{source('AdventureWorks','person')}}
+    from {{ source('AdventureWorks','person')}}
 )
 select *
 from source

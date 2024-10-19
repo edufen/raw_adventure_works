@@ -6,7 +6,7 @@ with source as (
         , storeid as store_id
         , rowguid	
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','customer')}}
+    from {{ source('AdventureWorks','customer')}}
 )
 select *
 from source

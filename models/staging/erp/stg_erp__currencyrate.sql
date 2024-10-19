@@ -6,7 +6,7 @@ with source as (
         , CAST(currencyratedate as DATETIME) as currencyrate_date
         , averagerate as average_rate
         , endofdayrate as endofday_rate
-    from {{source('AdventureWorks','currencyrate')}}
+    from {{ source('AdventureWorks','currencyrate')}}
 )
 select *
 from source

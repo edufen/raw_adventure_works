@@ -6,7 +6,7 @@ with source as (
         , expyear as exp_year
         , expmonth as exp_month
         , CAST(modifieddate as DATETIME) as modified_date
-    from {{source('AdventureWorks','creditcard')}}
+    from {{ source('AdventureWorks','creditcard')}}
 )
 select *
 from source
