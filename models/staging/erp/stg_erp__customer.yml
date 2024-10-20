@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_erp__customer
+    description: Table containing information about customers.
+    columns:
+      - name: CUSTOMER_ID
+        description: Unique identifier for each customer.
+      - name: PERSON_ID
+        description: Identifier for the person associated with the customer.
+      - name: TERRITORY_ID
+        description: Identifier for the territory of the customer.
+      - name: STORE_ID
+        description: Identifier for the store associated with the customer.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the customer record.
+      - name: MODIFIED_DATE
+        description: Date when the customer information was last modified.

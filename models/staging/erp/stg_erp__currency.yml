@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_erp__currency
+    description: Table containing information about currencies.
+    columns:
+      - name: CURRENCY_CODE
+        description: Unique code for each currency.
+      - name: NAME
+        description: Name of the currency.
+      - name: MODIFIED_DATE
+        description: Date when the currency information was last modified.

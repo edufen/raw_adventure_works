@@ -1,0 +1,26 @@
+version: 2
+
+models:
+  - name: stg_erp__salesorderdetail
+    description: Table containing details of sales orders.
+    columns:
+      - name: SALESORDERDETAIL_ID
+        description: Unique identifier for each sales order detail.
+      - name: SALESORDER_ID
+        description: Identifier for the associated sales order.
+      - name: SPECIALOFFER_ID
+        description: Identifier for any special offer applied.
+      - name: PRODUCT_ID
+        description: Identifier for the product in the sales order.
+      - name: UNIT_PRICE
+        description: Price per unit of the product.
+      - name: ORDER_QUANTITY
+        description: Quantity of the product ordered.
+      - name: UNITPRICE_DISCOUNT
+        description: Discount applied to the unit price.
+      - name: CARRIERTRACK_NUMBER
+        description: Tracking number provided by the carrier.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the sales order detail record.
+      - name: MODIFIED_DATE
+        description: Date when the sales order detail information was last modified.

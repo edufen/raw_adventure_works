@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_erp__currencyrate
+    description: Table containing information about currency exchange rates.
+    columns:
+      - name: CURRENCYRATE_ID
+        description: Unique identifier for each currency rate entry.
+      - name: FROM_CURRENCY_CODE
+        description: Code of the currency being converted from.
+      - name: TO_CURRENCY_CODE
+        description: Code of the currency being converted to.
+      - name: CURRENCYRATE_DATE
+        description: Date of the currency rate.
+      - name: AVERAGE_RATE
+        description: Average exchange rate for the specified date.
+      - name: ENDOFDAY_RATE
+        description: Exchange rate at the end of the day for the specified date.

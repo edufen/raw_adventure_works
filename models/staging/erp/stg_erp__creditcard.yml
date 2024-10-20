@@ -1,0 +1,18 @@
+version: 2
+
+models:
+  - name: stg_erp__creditcard
+    description: Table containing credit card information.
+    columns:
+      - name: CREDITCARD_ID
+        description: Unique identifier for each credit card.
+      - name: CARD_TYPE
+        description: Type of the credit card (e.g., Visa, MasterCard).
+      - name: CARD_NUMBER
+        description: Number associated with the credit card.
+      - name: EXP_YEAR
+        description: Expiration year of the credit card.
+      - name: EXP_MONTH
+        description: Expiration month of the credit card.
+      - name: MODIFIED_DATE
+        description: Date when the credit card information was last modified.

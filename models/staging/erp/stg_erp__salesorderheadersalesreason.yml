@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_erp__salesorderheadersalesreason
+    description: Table containing reasons for sales orders.
+    columns:
+      - name: SALESORDER_ID
+        description: Unique identifier for each sales order.
+      - name: SALESREASON_ID
+        description: Identifier for the reason associated with the sales order.
+      - name: MODIFIED_DATE
+        description: Date when the sales order reason information was last modified.

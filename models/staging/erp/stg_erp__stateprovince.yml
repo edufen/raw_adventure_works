@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_erp__stateprovince
+    description: Table containing information about states and provinces.
+    columns:
+      - name: STATEPROVINCE_ID
+        description: Unique identifier for each state or province.
+      - name: TERRITORY_ID
+        description: Identifier for the territory associated with the state or province.
+      - name: STATEPROVINCE_CODE
+        description: Code representing the state or province.
+      - name: NAME
+        description: Name of the state or province.
+      - name: ONLYSTATEPROVINCE_FLAG
+        description: Indicator for whether it is the only state or province in the territory.
+      - name: COUNTRYREGION_CODE
+        description: Code representing the associated country or region.
+      - name: DATETIME
+        description: Date when the state or province information was last modified.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the state or province record.

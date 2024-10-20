@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_erp__salesterritory
+    description: Table containing information about sales territories.
+    columns:
+      - name: TERRITORY_ID
+        description: Unique identifier for each sales territory.
+      - name: BUSINESSENTITY_ID
+        description: Identifier for the business entity associated with the territory.

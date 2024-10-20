@@ -1,0 +1,22 @@
+version: 2
+
+models:
+  - name: stg_erp__person
+    description: Table containing information about individuals.
+    columns:
+      - name: BUSINESSENTITY_ID
+        description: Unique identifier for each business entity.
+      - name: FIRST_NAME
+        description: First name of the person.
+      - name: MIDDLE_NAME
+        description: Middle name of the person.
+      - name: LAST_NAME
+        description: Last name of the person.
+      - name: PERSON_TYPE
+        description: Type of the person (e.g., individual, organization).
+      - name: EMAIL_PROMOTION
+        description: Indicator for email promotions consent.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the person record.
+      - name: MODIFIED_DATE
+        description: Date when the person information was last modified.
