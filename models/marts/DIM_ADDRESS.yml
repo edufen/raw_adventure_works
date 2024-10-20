@@ -1,0 +1,24 @@
+version: 2
+
+models:
+  - name: dim_address
+    description: Table containing address information.
+    columns:
+    - name: ADDRESS_SK
+      description: Surrogate key for uniquely identifying each address record.
+    - name: STATEPROVINCE_ID
+      description: Unique identifier for the province or state associated with the address.
+    - name: ADDRESS_ID
+      description: Unique identifier for the address.
+    - name: POSTAL_CODE
+      description: Postal code associated with the address.
+    - name: COUNTRY_NAME
+      description: Name of the country where the address is located.
+    - name: COUNTRYREGION_CODE
+      description: Code representing the broader country region.
+    - name: STATEPROVINCE_CODE
+      description: Code for the state or province.
+    - name: STATE_NAME
+      description: Name of the associated state or province.
+    - name: CITY_NAME
+      description: Name of the city where the address is located.
