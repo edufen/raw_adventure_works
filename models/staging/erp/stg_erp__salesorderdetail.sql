@@ -1,5 +1,5 @@
 with source as (
-    select 
+    select
         salesorderdetailid as salesorderdetail_id
         , salesorderid as salesorder_id
         , specialofferid as specialoffer_id

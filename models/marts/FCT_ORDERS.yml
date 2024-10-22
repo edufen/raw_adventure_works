@@ -6,6 +6,8 @@ models:
     columns:
       - name: SALESORDER_ID
         description: Unique identifier for each sales order.
+        data_tests:
+          - unique
       - name: CUSTOMER_SK
         description: Surrogate key for the customer associated with the order.
       - name: ADDRESS_SK
