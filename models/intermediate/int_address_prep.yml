@@ -5,7 +5,7 @@ models:
     description: Table containing address information.
     columns:
     - name: ADDRESS_SK
-      description: Surrogate key for uniquely identifying each address record.
+      description: Surrogate key for each address record.
     - name: STATEPROVINCE_ID
       description: Unique identifier for the province or state associated with the address.
     - name: ADDRESS_ID
