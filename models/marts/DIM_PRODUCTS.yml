@@ -8,6 +8,9 @@ models:
         description: Surrogate key generated for each product.
       - name: PRODUCT_ID
         description: Unique identifier for each product.
+        data_tests:
+          - unique
+          - not_null
       - name: PRODUCTSUBCATEGORY_ID
         description: Identifier for the product subcategory.
       - name: PRODUCT_NAME

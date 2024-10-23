@@ -64,6 +64,7 @@ WITH
         , customer.customer_sk
         , product.product_sk
         , address.address_sk
+        , salesreason.salesreason_sk
         , creditcard.creditcard_sk
         , orderheader.territory_id
         , orderdetail.specialoffer_id
@@ -78,6 +79,7 @@ WITH
         , orderdetail.total_amount_orderdetail as subtotal
         from orderheader
         left join customer on orderheader.customer_id = customer.customer_id
+        left join salesreason on orderheader.salesorder_id = salesreason.salesorder_id
         left join address on orderheader.address_id = address.address_id
         left join creditcard on orderheader.creditcard_id = creditcard.creditcard_id
         left join orderdetail on orderheader.salesorder_id = orderdetail.salesorder_id

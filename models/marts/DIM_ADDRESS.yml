@@ -6,10 +6,13 @@ models:
     columns:
     - name: ADDRESS_SK
       description: Surrogate key for uniquely identifying each address record.
-    - name: STATEPROVINCE_ID
-      description: Unique identifier for the province or state associated with the address.
     - name: ADDRESS_ID
       description: Unique identifier for the address.
+      data_tests:
+        - unique
+        - not_null
+    - name: STATEPROVINCE_ID
+      description: Unique identifier for the province or state associated with the address.
     - name: POSTAL_CODE
       description: Postal code associated with the address.
     - name: COUNTRY_NAME

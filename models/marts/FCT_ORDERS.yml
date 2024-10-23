@@ -1,62 +1,48 @@
 version: 2
 
 models:
-  - name: fct_orders
-    description: Intermediate table for preparing sales order data.
-    columns:
-      - name: SALESORDER_ID
-        description: Unique identifier for each sales order.
+  - name: int_fctoders_prep
+    description: Intermediate table containg orders information.
+    columns: 
+      - name: PRODUCT_SK
+        description: Surrogate key generated for each product.
         data_tests:
           - unique
-      - name: CUSTOMER_SK
-        description: Surrogate key for the customer associated with the order.
+          - not_null
       - name: ADDRESS_SK
-        description: Surrogate key for the shipping address.
+        description: Surrogate key for each address record.
+        data_tests:
+          - unique
+          - not_null
       - name: CREDITCARD_SK
-        description: Surrogate key for the credit card used in the order.
-      - name: PRODUCT_SK
-        description: Surrogate key for the product ordered.
-      - name: SPECIALOFFER_ID
-        description: Identifier for any special offer applied to the order.
-      - name: PRODUCT_ID
-        description: Identifier for the product in the sales order.
+        description: Surrogate key for each credit card.
+        data_tests:
+          - unique
+          - not_null
+      - name: SALESREASON_SK
+        description: Surrogate key for sale reason.
+        data_tests:
+          - unique
+          - not_null
       - name: TERRITORY_ID
-        description: Identifier for the territory associated with the order.
-      - name: CURRENCYRATE_ID
-        description: Identifier for the currency exchange rate used.
-      - name: PURCHASEORDER_NUMBER
-        description: Purchase order number associated with the order.
-      - name: CREDITCARDAPPROVAL_CODE
-        description: Approval code for the credit card transaction.
+        description: Identifier for the territory of the customer.
+      - name: SPECIALOFFER_ID
+        description: Unique special offer identifier.
       - name: ORDER_DATE
-        description: Date when the order was placed.
+        description: Date of the order.
       - name: SHIP_DATE
-        description: Date when the order was shipped.
+        description: Date the order is shipped to the customer.
       - name: DUE_DATE
-        description: Due date for the order payment.
-      - name: SUBTOTAL
-        description: Subtotal amount before tax and shipping.
-      - name: TOTAL_DUE
-        description: Total amount due for the order.
-      - name: AVERAGE_RATE
-        description: Average exchange rate applied to the order.
-      - name: TAX_AMT
-        description: Tax amount applied to the order.
+        description: Date the payment for the order is due.
+      - name: CREDITCARDAPPROVAL_CODE
+        description: Approval code from the credit card issuer for the transaction.
       - name: STATUS
-        description: Current status of the sales order.
-      - name: NAME
-        description: Name of the person associated with the order.
-      - name: REASON_TYPE
-        description: Type of the reason associated with the sales order.
+        description: Current status of the order (e.g., pending, completed, canceled).
       - name: UNIT_PRICE
-        description: Price per unit of the product ordered.
+        description: Price per unit of the product at the time of the order.
       - name: ORDER_QUANTITY
-        description: Quantity of the product ordered.
+        description: Total quantity of the product ordered.
       - name: UNITPRICE_DISCOUNT
-        description: Discount applied to the unit price.
-      - name: TYPE
-        description: Type of the special offer applied.
-      - name: CATEGORY
-        description: Category of the special offer applied.
-      - name: DISCOUNT_PCT
-        description: Percentage discount offered by the special offer.
+        description: Discount applied to the unit price of the product.
+      - name: SUBTOTAL
+        description: Total amount for the order before taxes and additional charges.
