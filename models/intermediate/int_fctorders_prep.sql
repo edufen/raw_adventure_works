@@ -79,14 +79,11 @@ WITH
         , orderdetail.total_amount_orderdetail as subtotal
         from orderheader
         left join customer on orderheader.customer_id = customer.customer_id
-        left join salesreason on orderheader.salesorder_id = salesreason.salesorder_id
         left join address on orderheader.address_id = address.address_id
         left join creditcard on orderheader.creditcard_id = creditcard.creditcard_id
         left join orderdetail on orderheader.salesorder_id = orderdetail.salesorder_id
         left join product on orderdetail.product_id = product.product_id
+        left join salesreason on orderheader.salesorder_id = salesreason.salesorder_id
     )
 
-select * from joined
-
-
-
+SELECT * from joined
