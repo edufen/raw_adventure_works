@@ -86,8 +86,7 @@ WITH
         left join product on orderdetail.product_id = product.product_id
     )
 
-select *
-from joined
+select * from joined
 
 
 
