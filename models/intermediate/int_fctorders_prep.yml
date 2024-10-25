@@ -6,6 +6,10 @@ models:
     columns: 
       - name: PRODUCT_SK
         description: Surrogate key generated for each product.
+        data_tests:
+          - unique
+          - not_null
+          
       - name: ADDRESS_SK
         description: Surrogate key for each address record.
       - name: CREDITCARD_SK
