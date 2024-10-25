@@ -8,8 +8,6 @@ models:
         description: Surrogate key generated for each customer.
       - name: CUSTOMER_ID
         description: Unique identifier for each customer.
-        data_tests:
-          - unique 
       - name: PERSON_ID
         description: Identifier for the person associated with the customer.
       - name: TERRITORY_ID

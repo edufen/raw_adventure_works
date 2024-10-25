@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_creditcard
+  - name: DIM_CREDITCARD
     description: Intermediate table for preparing credit card data.
     columns:
       - name: CREDITCARD_SK

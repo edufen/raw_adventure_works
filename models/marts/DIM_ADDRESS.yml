@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_address
+  - name: DIM_ADDRESS
     description: Table containing address information.
     columns:
     - name: ADDRESS_SK

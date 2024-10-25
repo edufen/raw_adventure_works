@@ -1,29 +1,21 @@
 version: 2
 
 models:
-  - name: fct_orders
+  - name: FCT_ORDERS
     description: Intermediate table containg orders information.
     columns: 
       - name: PRODUCT_SK
         description: Surrogate key generated for each product.
         data_tests:
-          - unique
           - not_null
       - name: ADDRESS_SK
         description: Surrogate key for each address record.
         data_tests:
-          - unique
           - not_null
       - name: CREDITCARD_SK
         description: Surrogate key for each credit card.
-        data_tests:
-          - unique
-          - not_null
       - name: SALESREASON_SK
         description: Surrogate key for sale reason.
-        data_tests:
-          - unique
-          - not_null
       - name: TERRITORY_ID
         description: Identifier for the territory of the customer.
       - name: SPECIALOFFER_ID

@@ -1,7 +1,7 @@
 version: 2
 
 models:
-  - name: dim_products
+  - name: DIM_PRODUCTS
     description: Intermediate table for preparing product data.
     columns:
       - name: PRODUCT_SK
