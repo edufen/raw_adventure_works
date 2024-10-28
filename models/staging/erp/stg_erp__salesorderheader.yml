@@ -4,10 +4,10 @@ models:
   - name: stg_erp__salesorderheader
     description: Table containing headers for sales orders.
     columns:
-      - name: SHIPMETHOD_ID
-        description: Identifier for the shipping method.
       - name: SALESORDER_ID
         description: Unique identifier for each sales order.
+      - name: SHIPMETHOD_ID
+        description: Identifier for the shipping method.
       - name: BILLTOADDRESS_ID
         description: Identifier for the billing address.
       - name: SALESPERSON_ID

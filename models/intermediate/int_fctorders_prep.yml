@@ -4,6 +4,12 @@ models:
   - name: int_fctoders_prep
     description: Intermediate table containg orders information.
     columns: 
+      - name: SALESORDER_ID
+        description: Unique identifier for each sales order.
+      - name: SALESORDERDETAIL_ID
+        description: Unique identifier for each sales order detail.
+      - name: CUSTOMER_SK
+        description: Surrogate key generated for each customer.
       - name: PRODUCT_SK
         description: Surrogate key generated for each product.
       - name: ADDRESS_SK

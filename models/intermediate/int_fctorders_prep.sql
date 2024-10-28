@@ -33,7 +33,6 @@ WITH
         , order_quantity
         , unit_price
         , unitprice_discount
-        , (order_quantity * (unit_price - unitprice_discount)) AS total_amount_orderdetail
         from {{ ref('stg_erp__salesorderdetail') }}
     )
     , orderheader as (
@@ -70,15 +69,14 @@ WITH
         , creditcard.creditcard_sk
         , orderheader.territory_id
         , orderdetail.specialoffer_id
-        , orderheader.order_date
-        , orderheader.ship_date
-        , orderheader.due_date
+        , CAST(orderheader.order_date as DATE) as order_date
+        , CAST(orderheader.ship_date as DATE) as ship_date
+        , CAST(orderheader.due_date as DATE) as due
         , orderheader.creditcardapproval_code
         , orderheader.status
         , orderdetail.unit_price
         , orderdetail.order_quantity
         , orderdetail.unitprice_discount
-        , orderdetail.total_amount_orderdetail as subtotal
         from orderheader
         left join customer on orderheader.customer_id = customer.customer_id
         left join address on orderheader.address_id = address.address_id
@@ -88,4 +86,12 @@ WITH
         left join salesreason on orderheader.salesorder_id = salesreason.salesorder_id
     )
 
-select * from joined
+    , metrics as (
+        select
+        *
+        , (order_quantity * unit_price) AS subtotal
+        , (order_quantity * (unit_price - unitprice_discount)) as total_due
+        from joined
+    )
+
+select * from metrics
