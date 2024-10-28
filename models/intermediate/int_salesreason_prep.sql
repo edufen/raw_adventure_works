@@ -18,7 +18,7 @@ with
         select
         row_number () over (order by salesreason.salesreason_id) as salesreason_sk
         , salesreason.salesreason_id
-        ,salesreasonheader.salesorder_id
+        , salesreasonheader.salesorder_id
         , salesreason.name
         , salesreason.reason_type
         from salesreason
@@ -26,4 +26,4 @@ with
     )
 
 select * from joined
-order by salesorder_id
+

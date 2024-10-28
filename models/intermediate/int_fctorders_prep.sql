@@ -52,7 +52,9 @@ WITH
         , subtotal
         , total_due
         , tax_amt
-        , status
+        , case
+            when status = 5 then 'Shipped'
+        end as status
         from {{ ref('stg_erp__salesorderheader') }}
         )
     
@@ -86,4 +88,4 @@ WITH
         left join salesreason on orderheader.salesorder_id = salesreason.salesorder_id
     )
 
-SELECT * from joined
+select * from joined
