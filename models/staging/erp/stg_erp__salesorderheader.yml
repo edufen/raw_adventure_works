@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: stg_erp__salesorderheader
+    description: Table containing headers for sales orders.
+    columns:
+      - name: SALESORDER_ID
+        description: Unique identifier for each sales order.
+      - name: SHIPMETHOD_ID
+        description: Identifier for the shipping method.
+      - name: BILLTOADDRESS_ID
+        description: Identifier for the billing address.
+      - name: SALESPERSON_ID
+        description: Identifier for the salesperson handling the order.
+      - name: SHIP_ADDRESS_ID
+        description: Identifier for the shipping address.
+      - name: CURRENCYRATE_ID
+        description: Identifier for the currency exchange rate used.
+      - name: CREDITCARD_ID
+        description: Identifier for the credit card used for the order.
+      - name: TERRITORY_ID
+        description: Identifier for the territory associated with the order.
+      - name: CUSTOMER_ID
+        description: Identifier for the customer placing the order.
+      - name: PURCHASEORDER_NUMBER
+        description: Purchase order number associated with the order.
+      - name: ACCOUNT_NUMBER
+        description: Account number for billing purposes.
+      - name: REVISION_NUMBER
+        description: Revision number for the sales order.
+      - name: CREDITCARDAPPROVAL_CODE
+        description: Approval code for the credit card transaction.
+      - name: ORDER_DATE
+        description: Date when the order was placed.
+      - name: SHIP_DATE
+        description: Date when the order was shipped.
+      - name: DUE_DATE
+        description: Due date for the order payment.
+      - name: SUBTOTAL
+        description: Subtotal amount before tax and shipping.
+      - name: TOTAL_DUE
+        description: Total amount due for the order.
+      - name: TAX_AMT
+        description: Tax amount applied to the order.
+      - name: FREIGHT
+        description: Shipping cost for the order.
+      - name: STATUS
+        description: Current status of the sales order.
+      - name: ONLINEORDER_FLAG
+        description: Indicator for whether the order was placed online.

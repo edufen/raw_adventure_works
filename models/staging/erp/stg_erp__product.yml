@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: stg_erp__product
+    description: Table containing information about products.
+    columns:
+      - name: PRODUCT_ID
+        description: Unique identifier for each product.
+      - name: PRODUCTSUBCATEGORY_ID
+        description: Identifier for the product subcategory.
+      - name: PRODUCT_NAME
+        description: Name of the product.
+      - name: PRODUCT_CLASS
+        description: Class of the product.
+      - name: PRODUCT_NUMBER
+        description: Unique product number.
+      - name: PRODUCT_LINE
+        description: Line to which the product belongs.
+      - name: LIST_PRICE
+        description: Standard list price of the product.
+      - name: STANDARD_COST
+        description: Standard cost of the product.
+      - name: REORDER_POINT
+        description: Stock level at which a new order should be placed.
+      - name: SELLSTART_DATE
+        description: Date when the product becomes available for sale.
+      - name: SELLEND_DATE
+        description: Date when the product is no longer available for sale.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the product record.
+      - name: MODIFIED_DATE
+        description: Date when the product information was last modified.

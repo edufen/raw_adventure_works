@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: DIM_CUSTOMER
+    description: Intermediate table for preparing customer data.
+    columns:
+      - name: CUSTOMER_SK
+        description: Surrogate key generated for each customer.
+      - name: CUSTOMER_ID
+        description: Unique identifier for each customer.
+        data_tests:
+          - unique
+          - not_null 
+      - name: PERSON_ID
+        description: Identifier for the person associated with the customer.
+        data_tests:
+          - unique
+      - name: TERRITORY_ID
+        description: Identifier for the territory of the customer.
+      - name: BUSINESSENTITY_ID
+        description: Identifier for the business entity associated with the person.
+        data_tests:
+          - unique
+      - name: NAME
+        description: Full name of the person (first name and last name combined).
+      - name: PERSON_TYPE
+        description: Type of the person (e.g., individual, organization).

@@ -1,0 +1,10 @@
+version: 2
+
+models:
+  - name: stg_erp__businessidentitycontact
+    description: Table containing information about business contacts.
+    columns:
+      - name: BUSINESSIDENTITY_ID
+        description: Unique ID of a business identity.
+      - name: PERSON_ID
+        description: Unique ID of a person related to Adventure Works.

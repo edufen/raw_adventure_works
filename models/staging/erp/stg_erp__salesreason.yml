@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_erp__salesreason
+    description: Table containing information about sales reasons.
+    columns:
+      - name: SALESREASON_ID
+        description: Unique identifier for each sales reason.
+      - name: NAME
+        description: Name of the sales reason.
+      - name: REASON_TYPE
+        description: Type of the sales reason (e.g., promotion, customer request).

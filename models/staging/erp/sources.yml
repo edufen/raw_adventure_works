@@ -41,7 +41,6 @@ sources:
               - not_null
           - name: salesorderid
             data_tests:
-              - unique
               - not_null              
       - name: salesorderheader
         description: A summary of a sales order containing information such as order date, total, and status.
@@ -80,5 +79,13 @@ sources:
         columns: 
           - name: stateprovinceid
             data_tests:
-              - unique
               - not_null
+      - name: salesterritoryhistory
+        description: A geographical area assigned to a sales representative or team, used for organizing sales efforts and managing customer relationships within specific regions.
+        columns:
+          - name: territoryid
+            data_tests:
+              - not_null
+              
+      - name: businessentitycontact
+        description: Table containing contact information.

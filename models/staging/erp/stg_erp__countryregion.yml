@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: stg_erp__countryregion
+    description: Table containing information about countries.
+    columns:
+      - name: COUNTRYREGION_CODE
+        description: Unique code assigned to each country or region.
+      - name: COUNTRY_NAME
+        description: Name of the country or region.
+      - name: MODIFIED_DATE
+        description: Date when the information was last modified.

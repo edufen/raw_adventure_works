@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: int_creditcard_prep
+    description: Intermediate table for preparing credit card data.
+    columns:
+      - name: CREDITCARD_SK
+        description: Surrogate key generated for each credit card.
+      - name: CREDITCARD_ID
+        description: Unique identifier for each credit card.
+      - name: CARD_NUMBER
+        description: Number associated with the credit card.
+      - name: CARD_TYPE
+        description: Type of the credit card (e.g., Visa, MasterCard).

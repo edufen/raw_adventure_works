@@ -1,0 +1,28 @@
+version: 2
+
+models:
+  - name: stg_erp__specialoffer
+    description: Table containing information about special offers.
+    columns:
+      - name: SPECIALOFFER_ID
+        description: Unique identifier for each special offer.
+      - name: TYPE
+        description: Type of the special offer (e.g., discount, promotion).
+      - name: CATEGORY
+        description: Category to which the special offer belongs.
+      - name: DISCOUNT_PCT
+        description: Percentage discount offered by the special offer.
+      - name: START_DATE
+        description: Date when the special offer becomes active.
+      - name: END_DATE
+        description: Date when the special offer expires.
+      - name: MIN_QUANTITY
+        description: Minimum quantity required to avail the special offer.
+      - name: MAX_QUANTITY
+        description: Maximum quantity eligible for the special offer.
+      - name: DESCRIPTION
+        description: Description of the special offer.
+      - name: MODIFIED_DATE
+        description: Date when the special offer information was last modified.
+      - name: ROWGUID
+        description: Unique globally unique identifier for the special offer record.

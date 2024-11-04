@@ -1,0 +1,20 @@
+version: 2
+
+models:
+  - name: stg_erp__address
+    description: Table containing address information.
+    columns:
+      - name: ADDRESS_ID
+        description: Unique identifier for the address.
+      - name: STATEPROVINCE_ID
+        description: Unique identifier for the province or state associated with the address.
+      - name: ADDRESS_LINE
+        description: Line of the address, include details such as house number, street name, and other relevant information.
+      - name: POSTAL_CODE
+        description: Postal code associated with the address.
+      - name: CITY
+        description: Name of the city where the address is located.
+      - name: ROWGUID
+        description: Globally unique identifier (GUID) used to distinguish records in the database.
+      - name: MODIFIED_DATE
+        description: Date and time of the last modification to the record.

@@ -1,0 +1,21 @@
+version: 2
+
+models:
+  - name: DIM_SALESREASON
+    description: Intermediate table for preparing sales reason data.
+    columns:
+      - name: SALESREASON_SK
+        description: Surrogate key generated for each sales reason entry.
+      - name: SALESREASON_ID
+        description: Unique identifier for each sales reason.
+        data_tests:
+          - not_null
+      - name: SALESORDER_ID
+        description: Identifier for the sales order associated with the sales reason.
+        data_tests:
+          - unique
+          - not_null
+      - name: NAME
+        description: Name of the sales reason.
+      - name: REASON_TYPE
+        description: Type of the sales reason (e.g., promotion, customer request).
