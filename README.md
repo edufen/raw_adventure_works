@@ -45,7 +45,7 @@ Este projeto demonstrou a aplicação de boas práticas no processo de construç
 
 ## Autor
 
-Desenvolvido por [Eduardo Batista de Lima]([url](https://www.linkedin.com/in/eduardobdlima/)) - Data Analyst Intern @ Indicium  
-[Formação de Engenharia de Analytics]([url](https://academy.indicium.tech/course/formacao-engenharia-de-analytics)) - TURMA 24_9  
+Desenvolvido por [Eduardo Batista de Lima](https://www.linkedin.com/in/eduardobdlima/) - Data Analyst Intern @ Indicium  
+[Formação de Engenharia de Analytics](https://academy.indicium.tech/course/formacao-engenharia-de-analytics) - TURMA 24_9  
 [Indicium Tech](https://www.indicium.tech/)  
 Novembro de 2024
