@@ -20,4 +20,4 @@ models:
       - name: LIST_PRICE
         description: Standard list price of the product.
       - name: STANDARD_COST
-        description: Standard cost of the product.
+        description: Standard cost of the product. 

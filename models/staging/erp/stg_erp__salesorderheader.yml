@@ -47,4 +47,4 @@ models:
       - name: STATUS
         description: Current status of the sales order.
       - name: ONLINEORDER_FLAG
-        description: Indicator for whether the order was placed online.
+        description: Indicator for whether the order was placed online. 

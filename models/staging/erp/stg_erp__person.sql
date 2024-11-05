@@ -11,4 +11,4 @@ with source as (
     from {{ source('AdventureWorks','person')}}
 )
 
-select * from source
+select * from source 

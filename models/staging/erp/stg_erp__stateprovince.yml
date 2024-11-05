@@ -19,4 +19,4 @@ models:
       - name: DATETIME
         description: Date when the state or province information was last modified.
       - name: ROWGUID
-        description: Unique globally unique identifier for the state or province record.
+        description: Unique globally unique identifier for the state or province record. 

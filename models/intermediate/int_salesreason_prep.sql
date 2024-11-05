@@ -26,4 +26,4 @@ with
     )
 
 select * from joined
-
+ 

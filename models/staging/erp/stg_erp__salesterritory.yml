@@ -7,4 +7,4 @@ models:
       - name: TERRITORY_ID
         description: Unique identifier for each sales territory.
       - name: BUSINESSENTITY_ID
-        description: Identifier for the business entity associated with the territory.
+        description: Identifier for the business entity associated with the territory. 

@@ -25,4 +25,4 @@ with source as (
     from {{ source('AdventureWorks','salesorderheader')}}
 )
 
-select * from source
+select * from source 

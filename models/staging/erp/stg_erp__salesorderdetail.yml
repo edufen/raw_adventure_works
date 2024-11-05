@@ -23,4 +23,4 @@ models:
       - name: ROWGUID
         description: Unique globally unique identifier for the sales order detail record.
       - name: MODIFIED_DATE
-        description: Date when the sales order detail information was last modified.
+        description: Date when the sales order detail information was last modified. 

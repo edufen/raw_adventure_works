@@ -29,4 +29,4 @@ models:
       - name: ROWGUID
         description: Unique globally unique identifier for the product record.
       - name: MODIFIED_DATE
-        description: Date when the product information was last modified.
+        description: Date when the product information was last modified. 

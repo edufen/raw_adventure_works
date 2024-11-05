@@ -11,4 +11,4 @@ with
         from {{ ref('stg_erp__product') }}
     )
 
-select * from product
+select * from product 

@@ -13,4 +13,4 @@ with source as (
     from {{ source('AdventureWorks','salesorderdetail')}}
 )
 
-select * from source
+select * from source 

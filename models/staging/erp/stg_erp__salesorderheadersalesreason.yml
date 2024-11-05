@@ -9,4 +9,4 @@ models:
       - name: SALESREASON_ID
         description: Identifier for the reason associated with the sales order.
       - name: MODIFIED_DATE
-        description: Date when the sales order reason information was last modified.
+        description: Date when the sales order reason information was last modified. 

@@ -9,4 +9,4 @@ models:
       - name: NAME
         description: Name of the sales reason.
       - name: REASON_TYPE
-        description: Type of the sales reason (e.g., promotion, customer request).
+        description: Type of the sales reason (e.g., promotion, customer request). 

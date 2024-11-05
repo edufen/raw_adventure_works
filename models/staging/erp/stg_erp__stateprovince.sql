@@ -8,7 +8,7 @@ with source as (
         , countryregioncode as countryregion_code
         , CAST(modifieddate as DATETIME) as datetime
         , rowguid
-    from {{ source('AdventureWorks','stateprovince')}}
+    from {{ source('AdventureWorks','stateprovince')}} 
 )
 
 select * from source

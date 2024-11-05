@@ -9,4 +9,4 @@ models:
       - name: COUNTRY_NAME
         description: Name of the country or region.
       - name: MODIFIED_DATE
-        description: Date when the information was last modified.
+        description: Date when the information was last modified. 

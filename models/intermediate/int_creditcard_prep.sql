@@ -8,4 +8,4 @@ with
         from {{ ref('stg_erp__creditcard') }}
     )
 
-select * from creditcard
+select * from creditcard 

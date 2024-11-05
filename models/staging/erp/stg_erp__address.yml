@@ -17,4 +17,4 @@ models:
       - name: ROWGUID
         description: Globally unique identifier (GUID) used to distinguish records in the database.
       - name: MODIFIED_DATE
-        description: Date and time of the last modification to the record.
+        description: Date and time of the last modification to the record. 

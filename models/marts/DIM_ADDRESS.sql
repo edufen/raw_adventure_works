@@ -1,2 +1,2 @@
 select *
-from {{ ref('int_address_prep') }}
+from {{ ref('int_address_prep') }} 

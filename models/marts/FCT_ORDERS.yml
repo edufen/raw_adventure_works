@@ -48,4 +48,4 @@ models:
       - name: UNITPRICE_DISCOUNT
         description: Discount applied to the unit price of the product.
       - name: SUBTOTAL
-        description: Total amount for the order before taxes and additional charges.
+        description: Total amount for the order before taxes and additional charges. 

@@ -94,4 +94,4 @@ WITH
         from joined
     )
 
-select * from metrics
+select * from metrics 

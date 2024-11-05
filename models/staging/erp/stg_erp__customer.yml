@@ -15,4 +15,4 @@ models:
       - name: ROWGUID
         description: Unique globally unique identifier for the customer record.
       - name: MODIFIED_DATE
-        description: Date when the customer information was last modified.
+        description: Date when the customer information was last modified. 
