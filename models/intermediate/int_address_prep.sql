@@ -40,3 +40,4 @@ with
     )
 
 select * from joined
+ 

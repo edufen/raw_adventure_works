@@ -12,4 +12,4 @@ with
 
 select total_sales
 from sales_in_2011
-where total_sales not between 12646112.10 and 12646112.20
+where total_sales not between 12646112.10 and 12646112.20 

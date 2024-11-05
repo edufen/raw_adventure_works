@@ -15,4 +15,4 @@ models:
       - name: AVERAGE_RATE
         description: Average exchange rate for the specified date.
       - name: ENDOFDAY_RATE
-        description: Exchange rate at the end of the day for the specified date.
+        description: Exchange rate at the end of the day for the specified date. 

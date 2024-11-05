@@ -25,4 +25,4 @@ models:
       - name: MODIFIED_DATE
         description: Date when the special offer information was last modified.
       - name: ROWGUID
-        description: Unique globally unique identifier for the special offer record.
+        description: Unique globally unique identifier for the special offer record. 

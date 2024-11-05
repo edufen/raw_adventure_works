@@ -7,4 +7,4 @@ models:
       - name: BUSINESSIDENTITY_ID
         description: Unique ID of a business identity.
       - name: PERSON_ID
-        description: Unique ID of a person related to Adventure Works.
+        description: Unique ID of a person related to Adventure Works. 

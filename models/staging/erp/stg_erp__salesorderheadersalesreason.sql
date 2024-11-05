@@ -10,4 +10,4 @@ with source as (
 select *
 from source
 where rowN = 1
-order by salesorder_id
+order by salesorder_id 

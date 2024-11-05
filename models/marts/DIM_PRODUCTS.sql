@@ -1,2 +1,2 @@
 select *
-from {{ ref('int_product_prep') }}
+from {{ ref('int_product_prep') }} 

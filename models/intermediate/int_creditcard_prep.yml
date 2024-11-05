@@ -11,4 +11,4 @@ models:
       - name: CARD_NUMBER
         description: Number associated with the credit card.
       - name: CARD_TYPE
-        description: Type of the credit card (e.g., Visa, MasterCard).
+        description: Type of the credit card (e.g., Visa, MasterCard). 

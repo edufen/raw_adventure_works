@@ -9,4 +9,4 @@ with source as (
     from {{ source('AdventureWorks','creditcard')}}
 )
 
-select * from source
+select * from source 

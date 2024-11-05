@@ -24,4 +24,4 @@ models:
       - name: NAME
         description: Full name of the person (first name and last name combined).
       - name: PERSON_TYPE
-        description: Type of the person (e.g., individual, organization).
+        description: Type of the person (e.g., individual, organization). 

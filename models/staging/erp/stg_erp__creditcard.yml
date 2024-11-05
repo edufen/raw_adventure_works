@@ -15,4 +15,4 @@ models:
       - name: EXP_MONTH
         description: Expiration month of the credit card.
       - name: MODIFIED_DATE
-        description: Date when the credit card information was last modified.
+        description: Date when the credit card information was last modified. 

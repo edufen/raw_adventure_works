@@ -24,4 +24,4 @@ models:
     - name: STATE_NAME
       description: Name of the associated state or province.
     - name: CITY_NAME
-      description: Name of the city where the address is located.
+      description: Name of the city where the address is located. 

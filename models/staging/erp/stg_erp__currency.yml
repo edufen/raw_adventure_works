@@ -9,4 +9,4 @@ models:
       - name: NAME
         description: Name of the currency.
       - name: MODIFIED_DATE
-        description: Date when the currency information was last modified.
+        description: Date when the currency information was last modified. 
