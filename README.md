@@ -28,10 +28,7 @@ A solução envolveu o uso das ferramentas **Snowflake** para o Data Warehouse e
 As perguntas de negócios foram totalmente atendidas no dashboard, permitindo uma análise detalhada das vendas e clientes da Adventure Works. Foram respondidas questões como o número de pedidos, quantidade comprada e valor total negociado por diversos atributos, incluindo produto, tipo de cartão, motivo de venda, e localizações geográficas (cidade, estado e país). Além disso, o dashboard fornece insights sobre os produtos com maior ticket médio por diferentes períodos e regiões, identifica os 10 melhores clientes por valor total negociado, as 5 melhores cidades em termos de vendas, e analisa o número de pedidos e valores negociados ao longo do tempo. Também foi possível identificar o produto com maior quantidade de unidades compradas para o motivo de venda "Promotion".
   
 - **Ferramenta Usada**: Foi criado um dashboard interativo no Power BI.
- 
-## Acessar o Dashboard
-   - O dashboard pode ser acessado [aqui](url).
-     
+      
 ## Tecnologias Utilizadas
 
 - **Data Warehouse**: Snowflake
